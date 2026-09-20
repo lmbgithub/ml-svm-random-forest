@@ -1,13 +1,15 @@
-# ml-svm-random-forest — the comparison everyone publishes is not a comparison
+# ml-svm-random-forest
 
-SVM against random forest on UCI Covertype: 581,012 rows, 54 features, 7 classes,
-about 100:1 imbalance.
+SVM against random forest on UCI Covertype: 581,012 rows, 54 features, 7
+classes, and roughly 100:1 class imbalance.
 
 An RBF SVM cannot be trained on 581,012 rows — kernel training is between
 quadratic and cubic in the row count, and the kernel matrix alone is about
-2,700 GB. So every published version of this comparison subsamples for the SVM.
-The mistake is to subsample for the SVM, train the forest on everything, and put
-both accuracies in the same table. That table compares two different experiments.
+2,700 GB — so every published version of this comparison subsamples for the SVM.
+The common mistake is to subsample for the SVM, train the forest on everything,
+and put both accuracies in one table, which compares two different experiments.
+This project runs the comparison so that the training budget is equal and the
+numbers mean what the table says they do.
 
 **Standard library only for the measurement half. 82 tests.**
 
