@@ -1,0 +1,4 @@
+# Needed only for the scikit-learn models and the dataset download.
+# The metrics, sampling, baselines and the offline example are standard library.
+scikit-learn>=1.3
+ucimlrepo>=0.0.7
